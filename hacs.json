@@ -1,0 +1,6 @@
+{
+  "name": "Device Swap Assistant",
+  "content_in_root": false,
+  "domains": ["device_swap_assistant"],
+  "homeassistant": "2023.0.0"
+}
