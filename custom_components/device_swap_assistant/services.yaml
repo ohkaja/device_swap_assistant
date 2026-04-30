@@ -1,0 +1,60 @@
+
+identify:
+  name: Identifizieren
+  description: Lässt eine Entität kurz blinken oder schaltet sie kurz an/aus.
+  fields:
+    entity_id:
+      name: Entität
+      required: true
+      selector:
+        entity:
+
+swap_entities:
+  name: Entitäten tauschen
+  description: Tauscht eine einzelne neue Entität auf die Entity-ID einer alten Entität.
+  fields:
+    old_entity_id:
+      name: Alte Entität
+      required: true
+      selector:
+        entity:
+    new_entity_id:
+      name: Neue Entität
+      required: true
+      selector:
+        entity:
+    on_finish:
+      name: Alte Entität nach dem Tausch
+      required: false
+      default: disable
+      selector:
+        select:
+          options:
+            - keep
+            - disable
+            - delete
+
+swap_devices:
+  name: Devices tauschen
+  description: Matcht Entities beider Geräte nach Domain und tauscht ihre Entity-IDs.
+  fields:
+    old_device_id:
+      name: Altes Device
+      required: true
+      selector:
+        device:
+    new_device_id:
+      name: Neues Device
+      required: true
+      selector:
+        device:
+    on_finish:
+      name: Alte Entities nach dem Tausch
+      required: false
+      default: disable
+      selector:
+        select:
+          options:
+            - keep
+            - disable
+            - delete
